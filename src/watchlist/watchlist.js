@@ -44,7 +44,7 @@ function renderWatchList(){
 
 // Handles the fetch request to the Omdd API and sets up an HTML
 async function handleFetchIndividualMovie(imdbId){
-    const res = await fetch(`http://www.omdbapi.com/?apikey=a8e4ebcc&i=${imdbId}&plot=short`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=a8e4ebcc&i=${imdbId}&plot=short`)
     const data = await res.json();
         let html = `
         <section class="movie" tabindex="0">

@@ -2,7 +2,6 @@ const main = document.querySelector("main");
 const searchInput = document.querySelector(`input[type="text"]`);
 const searchButton = document.getElementById("search-button");
 const loadMoreBtn = document.querySelector(".load-more-btn");
-const apikey = process.env.API_KEY;
 let watchlistArr = JSON.parse(localStorage.getItem("watchlistArr")) || [];
 let currentMoviesRenderedInImdbIdArr = [];
 let currentMoviesRenderedIn = 0;
@@ -43,7 +42,7 @@ loadMoreBtn.addEventListener("click",async ()=>{
 
 async function handleSearch(isFirstSearch){
     //Handles Fetch
-    const resp = await fetch(`http://www.omdbapi.com/?apikey=a8e4ebcc&s=${currentSearchTerm}&type=movie&page=${pageToRender}`);
+    const resp = await fetch(`https://www.omdbapi.com/?apikey=a8e4ebcc&s=${currentSearchTerm}&type=movie&page=${pageToRender}`);
     const data = await resp.json();
     
     //If the response is false
@@ -78,7 +77,7 @@ async function handleSearch(isFirstSearch){
 }
 
 async function handleFetchIndividualMovie(imdbId){
-    const res = await fetch(`http://www.omdbapi.com/?apikey=a8e4ebcc&i=${imdbId}&plot=short`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=a8e4ebcc&i=${imdbId}&plot=short`)
     const data = await res.json();
         let html = `
         <section class="movie" tabindex="0">
