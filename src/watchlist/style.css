@@ -21,8 +21,7 @@ header{
   width: 100%;
   background-position: center;
   background-size: cover;
-  min-height: 175px;
-  height: 30vh;
+  height: 260px;
   background-image: url(../../background.png);
   margin-bottom: 2.5em;
 }
@@ -63,7 +62,7 @@ a:visited{
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: -3.5vh;
+  bottom: -25px;
   width: 90%;
   text-align: left;
   margin: 0 auto;
